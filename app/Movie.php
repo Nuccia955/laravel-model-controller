@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     public $timestamps = false;
+
+    public function roundVote() {
+        return round($this->vote / 2, 0);
+    }
 }
